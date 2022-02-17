@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova_1</title>
+    <link rel="shortcut icon" href="icon.icon.jpg" type="image/x-icon">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind&family=Karla:wght@400;700&display=swap');
+        body{
+            width: 1440px;
+            font-family: 'Karla', sans-serif;
+            box-sizing: border-box;
+            background-color: hsl(204, 43%, 93%);
+        }
+
+        h1{
+            margin-top: 50px;
+            margin-left: 60px;
+            color: hsl(179, 62%, 43%);
+            
+        }
+        .verde{
+            margin-left: 60px;
+            color: hsl(71, 73%, 54%);
+        }
+        .cabeçalho{
+            margin-left: 60px;
+            color:hsl(218, 22%, 67%);
+            margin-bottom: 30px;
+        }
+        header{
+            border-radius:2px 2px 0px 0px;
+            background-color: white;
+            grid-row-start: 1;
+            grid-row-end: 2;
+
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        main{
+            border-radius: 0px 0px 2px 0px;
+            height: 300px;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            align-items:center;
+            background-color: hsl(179, 62%, 43%);
+            color: white;
+
+            grid-row-start: 2;
+            grid-row-end: 3;
+
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        article{
+            border-radius: 0px 0px 0px 2px;
+            height: 300px;
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            align-content: center;
+            align-items:center;
+            background-color: rgb(74,190,189);
+            color: white;
+
+            grid-row-start: 2;
+            grid-row-end: 3;
+
+            grid-column-start: 2;
+            grid-column-end: 3;    
+        }
+        .containder{
+            margin: 300px;
+            display: grid; 
+            box-shadow: 1px 1px 7px 1px gray
+        }
+        button{
+            background-color:hsl(71, 73%, 54%);
+            color: white;
+            border: 0px;
+            border-radius: 2px;
+            width: 250px;
+            height: 40px;
+            margin-bottom: 28px; 
+            transition:transform 1s;
+            transform: translateX(0) scale(1);
+            
+        }
+        button:hover
+        button:focus{
+            background: blue;
+            transform: translateX(10px) scale(1.2);
+        }
+        
+        .numero{
+            font-weight: 700;
+            font-size: 30px;  
+        }
+        
+        @media(max-widht:375px){ /*porque n ta pegando*/
+            .containder {
+                grid-template-rows: 128px 128px 128px;
+                border-radius: 2px;
+                grid-template-columns: 1fr;}
+            
+             .header{
+                
+                grid-row-start: 1;
+                grid-row-end: 2;
+
+                grid-column-start: 1;
+                grid-column-end: 2; 
+                max-width: 375px;
+                }
+
+             .main{
+                grid-row-start: 2;
+                grid-row-end: 3;
+
+                grid-column-start: 1;
+                grid-column-end: 2; 
+                max-width: 375px;
+             }
+
+             .article{
+                grid-row-start: 3;
+                grid-row-end: 4;
+
+                grid-column-start: 1;
+                grid-column-end: 2; 
+                max-width: 375px;
+             }   
+
+            }
+
+        .caixa{
+            animation: infinite;
+            display: flex;
+            align-items: baseline;
+        }
+        .numero{
+            margin-right: 6px;
+            margin-top: 10px;
+            margin-bottom: 0px;
+        }
+        .canto{
+            margin-left: -120px;
+            
+
+        }
+        
+        
+        
+        
+      
+        
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="containder">
+        <header>
+            <h1>Join our community</h1>
+            <h2 class="verde">30-day, hassle-free money back guarantee</h2>
+            <p class="cabeçalho">Gain access to our full library of tutorials along with expert code reviews.<br>
+            Perfect to any developers who are serious about honing their skills </p>
+        </header>
+    
+        <main>
+            <h2>Monthly Subscription </h2>
+            <div class="caixa">
+                <p class="numero">$29</p> <small>per month</small>
+            </div>
+            <p>Full access for less then 1$ a day</p>
+            <button id="button">Sing Up</button>
+        </main>
+        <article>
+            <h2 class="canto">Why Us</h2>
+            <p>Tutorials by industry experts <br>
+             Per & expert code review <br>
+             Coding exercises <br>
+             Acess to our Github repos <br>
+             Community forum <br>
+             FleshCard decks <br>
+             New videos every week <br>
+             </p>
+        </article>  
+    </div>
+</body>
+</html>
